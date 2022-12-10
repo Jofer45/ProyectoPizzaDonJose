@@ -27,4 +27,13 @@ public class ListaCategoria {
         }
         return -1;
     }
+    
+    public static String obtenerNombreCat(int idcat){
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i).getIdcat()==idcat) {
+                return lista.get(i).getDescripcion();
+            }
+        }
+        return null;
+    }
 }

@@ -18,4 +18,13 @@ public class ListaProductos {
     public static Producto obtenerProducto(int pos){ return lista.get(pos); }
     public static int cantidadProducto(){ return lista.size(); }
     public static void limpiarProductos(){ lista.removeAll(lista); }
+    
+    public static Producto obtenerProdId(int id){
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i).getIdprod()==id) {
+                return lista.get(i);
+            }
+        }
+        return null;
+    }
 }
