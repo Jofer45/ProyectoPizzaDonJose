@@ -385,6 +385,9 @@
                             <div class="col-8">
                                 <h1 class="h3 mb-2 text-gray-800">Mantenimiento de Clientes</h1>
                             </div>
+                            <div class="col-4 align-self-center d-md-flex justify-content-md-end">
+                                <a href="${pageContext.request.contextPath}/reportes/rptclientes.jsp" target="_blank" class="btn btn-warning">Exportar registro</a>                            
+                            </div>
                         </div><br>
 
                         <!-- DataTales Example -->

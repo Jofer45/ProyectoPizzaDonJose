@@ -1,10 +1,16 @@
 <%-- 
-    Document   : rptclientes
-    Created on : 8 dic. 2022, 21:14:45
+    Document   : rpt1
+    Created on : 8 dic. 2022, 14:06:18
     Author     : Jose Luis
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@page import ="java.util.*"%>
+<%@page import ="java.io.File"%>
+<%@page import ="java.sql.*"%>
+<%@page import ="DAO.ConectarDB"%>
+<%@page import ="net.sf.jasperreports.engine.JasperRunManager"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +18,22 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%
+           ConectarDB db=new ConectarDB();
+           
+          File jasperFile = new File(application.getRealPath("reportes/rpClientes.jasper"));
+          Map parametro = new HashMap();
+          //parametro.put("parametro1", "valor");
+          byte[] bytes = JasperRunManager.runReportToPdf(jasperFile.getPath(), 
+                                                                            null,db.conexion);
+          response.setContentType("application/pdf");
+          response.setContentLength(bytes.length);
+          
+          ServletOutputStream output = response.getOutputStream();
+          response.getOutputStream();
+          output.write(bytes,0,bytes.length);
+          output.flush();
+          output.close();
+            %>
     </body>
 </html>
