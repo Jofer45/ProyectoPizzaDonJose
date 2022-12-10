@@ -22,7 +22,7 @@
         <%
            ConectarDB db=new ConectarDB();
            
-          File jasperFile = new File(application.getRealPath("reportes/rptProducto.jasper"));
+          File jasperFile = new File(application.getRealPath("reportes/rpProductos.jasper"));
           Map parametro = new HashMap();
           //parametro.put("parametro1", "valor");
           byte[] bytes = JasperRunManager.runReportToPdf(jasperFile.getPath(), 
