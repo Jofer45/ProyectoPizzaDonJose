@@ -390,7 +390,8 @@
                                 <h1 class="h3 mb-2 text-gray-800">Mantenimiento de Usuarios</h1>
                             </div>
                             <div class="col-4 align-self-center d-md-flex justify-content-md-end">
-                                <a href="registroUsuario.jsp" class="btn btn-success">Añadir usuario</a>                              
+                                <a href="${pageContext.request.contextPath}/reportes/rptusuarios.jsp" target="_blank" class="btn btn-warning">Exportar registro</a>
+                                <a href="registroUsuario.jsp" style="margin-left: 20px" class="btn btn-success">Añadir usuario</a>                              
                             </div>
                         </div><br>
 
