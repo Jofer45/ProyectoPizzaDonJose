@@ -74,7 +74,7 @@
                                 <ul class="nav navbar-nav navbar-right">
                                     <li><a href="./index.jsp">Inicio</a></li>
                                 
-                                    <li><a href="./productos.jsp">Productos</a></li>
+                                    <li><a href="./producto.jsp">Productos</a></li>
                                    
                                     <li><a href="./index.jsp#gallery">Galeria</a></li>
                                     
