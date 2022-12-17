@@ -81,6 +81,9 @@
                                     
                                     <li><a href="contactanos.jsp">Contactanos </a></li>
                                     <li><a href="nosotros.jsp">Nosotros </a></li> 
+                                    <li><a href="Controlador?accion=Carrito" style="text-decoration: none; color: white;" rel="noopener noreferrer">
+                                <i class="fas fa-cart-plus">(<label style="color: orange">${contador}</label>)</i>
+                            </a></li> 
                                     <div class="icons">
                                         <a  href="./login.jsp" class="icon-login">
                                             <i class="fa-solid fa-user"></i>
@@ -185,7 +188,7 @@
                                                     </p>
                                                 </div>                        
                                                 <div class="main__new">
-                                                    <a class="btn">Añadir</a>
+                                                    <a class="btn" href="Controlador?accion=AgregarCarrito&id=<%= prod.getIdprod() %>">Añadir</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -211,7 +214,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="main__new">
-                                                    <a class="btn">Añadir</a>
+                                                    <a class="btn" href="Controlador?accion=AgregarCarrito&id=<%= prod.getIdprod() %>">Añadir</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -238,7 +241,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="main__new">
-                                                    <a class="btn">Añadir</a>
+                                                    <a class="btn" href="Controlador?accion=AgregarCarrito&id=<%= prod.getIdprod() %>">Añadir</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,7 +267,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="main__new">
-                                                    <a class="btn">Añadir</a>
+                                                    <a class="btn" href="Controlador?accion=AgregarCarrito&id=<%= prod.getIdprod() %>">Añadir</a>
                                                 </div>
                                             </div>
                                         </div>

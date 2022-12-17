@@ -84,4 +84,23 @@ public class CRUDProductos extends ConectarDB{
         }
         return false;
     }
+    
+    public Producto filtrarProducto(int idprod){
+        try{
+            rs=st.executeQuery("SELECT * FROM productos WHERE idprod="+idprod);
+            
+            if (rs.next()) {
+                Producto prod=new Producto();
+                prod.setIdprod(rs.getInt(1));
+                prod.setIdcat(rs.getInt(2));
+                prod.setNomProd(rs.getString(3));
+                prod.setDescripcion(rs.getString(4));
+                prod.setPrecio(rs.getDouble(5));
+                return prod;
+            }
+        }catch(Exception ex){
+            Mensajes.M1("ERROR: no se puede eliminar el registro.."+ex);
+        }
+        return null;
+    }
 }
