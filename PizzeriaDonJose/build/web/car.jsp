@@ -84,7 +84,7 @@
                                         <td><%= car.getPrecioCompra() %></td>
                                         <td>
                                             <input type="hidden" id="idpro" value="<%= car.getIdProducto() %>">
-                                            <input type="number" id="Cantidad" value="<%= car.getCantidad() %>" class="form-control text-center" min="1">
+                                            <input type="number" id="Cantidad" value="<%= car.getCantidad() %>" class="form-control text-center" min="1" max="20">
                                         </td>
                                         <td><%= car.getSubTotal() %></td>
                                         <td>
