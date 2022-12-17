@@ -116,6 +116,7 @@ public class Controlador extends HttpServlet {
                         carrito.remove(i);
                     }
                 }
+                break;
             default:
                 request.setAttribute("contador", carrito.size());
                 request.getRequestDispatcher("/producto.jsp").forward(request, response);
